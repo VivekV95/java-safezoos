@@ -39,8 +39,8 @@ class User : Auditable {
 
     constructor() {}
 
-    constructor(name: String, password: String, userRoles: MutableList<UserRoles>) {
-        username = name
+    constructor(username: String, password: String, userRoles: MutableList<UserRoles>) {
+        this.username = username
         setPassword(password)
         for (ur in userRoles) {
             ur.user = this
